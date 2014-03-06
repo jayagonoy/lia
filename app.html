@@ -1,15 +1,15 @@
+
 <!DOCTYPE HTML>
 	<head>
 		<title>LIA: Location, Information, Action</title>
-		<link rel="stylesheet" href="src/map/dist/leaflet.css" />
-		<script type="text/javascript" src="src/map/build/deps.js"></script>
-		<script src="src/map/debug/leaflet-include.js"></script>
+		<link rel="stylesheet" href="src/map/leaflet.css" />
+		<script type="text/javascript" src="src/map/leaflet.js"></script>
 		<style>
 		#map {
 			width: 75%; 
-			height: 95.5%;
-			border: none;
-			position: absolute;
+			height: 94%;
+			
+			position: fixed;
 			margin-bottom: -7px;
 		}
 		
@@ -19,7 +19,7 @@
 		</style>
 		<link rel="stylesheet" href="src/style.css" />
 		<script src="src/jquery-2.0.3.min.js"></script>
-		<script src="src/uikit.js"></script>
+		<script src="src/uikit.min.js"></script>
 	</head>
 	<body>
 		<!-- Navbar -->
@@ -27,7 +27,7 @@
 			<ul class="uk-navbar-nav">
 				<li class="uk-active uk-hidden-small"><a href="">LIA</a></li>
 				<div class="uk-navbar-content">
-					<form class="uk-search" data-uk-search="{source:'d.json'}">
+					<form class="uk-search" data-uk-search="{source:'data.json'}">
 						<input class="uk-search-field" type="search" placeholder="Search...">
 						<button class="uk-search-close" type="reset"></button>
 					</form>
@@ -49,7 +49,7 @@
 						<div class="uk-dropdown uk-dropdown-navbar">
 							<ul class="uk-nav uk-nav-navbar">
 								<li><a href="#"><i class="uk-icon-facebook"></i> Post to Facebook</a></li>
-								<li><a href="#"><i class="uk-icon-twitter"></i> Tweet This</a></li>
+								<li><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fassortex.github.io%2Flia%2F"><i class="uk-icon-twitter"></i> Tweet This</a></li>
 								<li><a href="#"><i class="uk-icon-google-plus"></i> Share on Google+</a></li>
 							</ul>
 						</div>
@@ -64,36 +64,24 @@
 				<div class="uk-grid" data-uk-grid-match>
 					<div class="uk-width-medium-3-4">
 						<div id="map" class="uk-align-center uk-width-1-1 uk-responsive-width uk-responsive-height uk-display-inline-block"></div>
-						<script>
-							var tiles = new L.GridLayer();
+						<script>// create a map in the "map" div, set the view to a given place and zoom
+var map = L.map('map').setView([51.505, -0.09], 13);
 
-							tiles.createTile = function(coords) {
-								var tile = document.createElement('canvas'),
-									ctx = tile.getContext('2d');
+// add an OpenStreetMap tile layer
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
 
-								tile.width = tile.height = 256;
+// add a marker in the given location, attach some popup content to it and open the popup
+L.marker([51.5, -0.09]).addTo(map)
+    .bindPopup('A pretty CSS3 popup. <br> Easily customizable.')
+    .openPopup();
 
-								ctx.fillStyle = '02406f';
-								ctx.fillRect(0, 0, 255, 255);
+function onMapClick(e) {
+    alert("You clicked the map at " + e.latlng);
+}
 
-								ctx.fillStyle = 'white';
-								ctx.fillText('x: ' + coords.x + ', y: ' + coords.y + ', zoom: ' + coords.z, 20, 20);
-
-								ctx.strokeStyle = '02406f';
-								ctx.beginPath();
-								ctx.moveTo(0, 0);
-								ctx.lineTo(255, 0);
-								ctx.lineTo(255, 255);
-								ctx.lineTo(0, 255);
-								ctx.closePath();
-								ctx.stroke();
-
-								return tile;
-							}
-							
-							var map = new L.Map('map', {center: new L.LatLng(50.5, 30.51), zoom: 15, layers: [tiles]});
-							map.addLayer(marker);
-						</script>
+map.on('click', onMapClick);</script>
 		
 					</div>
 					<div class="uk-width-medium-1-4 uk-hidden-small">
@@ -188,7 +176,7 @@
 							<div class="uk-dropdown uk-dropdown-navbar">
 								<ul class="uk-nav uk-nav-navbar">
 									<li><a href="#"><i class="uk-icon-facebook"></i> Post to Facebook</a></li>
-									<li><a href="#"><i class="uk-icon-twitter"></i> Tweet This</a></li>
+									<li><a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fassortex.github.io%2Flia%2F"><i class="uk-icon-twitter"></i> Tweet This</a></li>
 									<li><a href="#"><i class="uk-icon-google-plus"></i> Share on Google+</a></li>
 								</ul>
 							</div>
