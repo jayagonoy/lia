@@ -1,0 +1,3 @@
+CHANGELOG
+
+March 7 - Added Homepage, modified App to have off-canvas sidebar. Refurbished map script. Added ordinances.js
