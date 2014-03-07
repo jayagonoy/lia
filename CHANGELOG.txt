@@ -1,3 +1,4 @@
-CHANGELOG
+LOG
 
-March 7 - Added Homepage, modified App to have off-canvas sidebar. Refurbished map script. Added ordinances.js
+March 7 (initial) -  Added Homepage, modified App to have off-canvas sidebar. Refurbished map script. Added ordinances.js
+March 7 (5:06pm) - still can't figure how to make the search function work amidst its compatibility in the browser.
