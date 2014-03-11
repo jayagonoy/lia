@@ -464,7 +464,7 @@ var munBorder = L.polygon([
 
 // Plot all the ordinances fetched from database/ordinances.js in the map 
 	
-	L.marker([14.57856, -238.88032]).addTo(map).bindPopup(ord1);
-	L.marker([14.57856, -238.88020]).addTo(map).bindPopup(ord2);
-	L.marker([14.57856, -238.88024]).addTo(map).bindPopup(ord3);
+	L.marker([14.554510,121.114486]).addTo(map).bindPopup(ord1);
+	L.marker([14.567686,121.122733]).addTo(map).bindPopup(ord2);
+	L.marker([14.568216,121.123345]).addTo(map).bindPopup(ord3);
 
