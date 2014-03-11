@@ -45,20 +45,20 @@
 
 		</style>
 		
+		<!-- JS Files -->
+		<script src="src/jquery-2.0.3.min.js"></script>
+		<script src="src/uikit.min.js"></script>
+		<script type="text/javascript" src="src/map/leaflet.js"></script>
+		
 		<link rel="shortcut icon" href="src/favicon.ico" type="image/x-icon" />
 		<link rel="apple-touch-icon-precomposed" href="src/apple-touch-icon.png" />
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<link rel="stylesheet" href="src/style.css" />
-
-		<!-- JS Files -->
-		<script src="src/jquery-2.0.3.min.js"></script>
-		<script src="src/uikit.js"></script>
 		
-		<!-- UIkit -->
+		<!-- CSS Files -->
+		<link rel="stylesheet" href="src/style.css" />
 		<link rel="stylesheet" href="src/map/leaflet.css" />
-		<script type="text/javascript" src="src/map/leaflet.js"></script>
+
 	</head>
 	<body>
 
@@ -67,7 +67,7 @@
 				<ul class="uk-navbar-nav">
 					<li class="uk-active uk-hidden-small"><a href="#"><img class="uk-responsive-width uk-responsive-height" src="src/logo.svg" alt="LIA Logo" title="Location. Information. Action."/></a></li>
 					<div class="uk-navbar-content">
-						<form class="uk-search" data-uk-search="{source:'http://assortex.github.io/lia/database/data.json'}">
+						<form class="uk-search" data-uk-search="{source:'./database/data.json'}">
 							<input class="uk-search-field" type="search" placeholder="Search...">
 							<button class="uk-search-close" type="reset"></button>
 						</form>
@@ -106,10 +106,6 @@
 			
 			<!-- Body -->
 			<div id="map" class="uk-height-1-1 uk-width-medium-1-1 uk-responsive-height"></div>
-
-			
-
-			
 			
 			<!-- Modals -->
 			<div id="about" class="uk-modal">
@@ -133,9 +129,39 @@
 			<div id="contact" class="uk-modal">
 				<div class="uk-modal-dialog">
 					<a class="uk-modal-close uk-close uk-close-alt"></a>
-					<div class="uk-article">
-						<h1 class="uk-article-title">Contact</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<div class="tertiary uk-grid uk-margin-bottom"  uk-grid-preserve>
+						<div class="uk-width-1-1">
+							<div class="uk-panel uk-text-center">
+								<h2 class="uk-h1">Contact</h2>
+							</div>
+						</div>
+						<div class="uk-width-medium-1-2 uk-grid-margin">
+							<div class="uk-panel uk-panel-box uk-panel-box-primary uk-panel-header">
+								<h3 class="uk-text-center">Jay Agonoy</h3>
+								<div class="uk-panel-badge uk-badge">
+										Project Manager
+									</div>
+									<div class="uk-grid uk-grid-preserve">
+										<div class="uk-width-1-1">
+											<div class="uk-panel uk-text-center">
+												<button class="uk-button">assortex@outlook.ph</button>
+											</div>
+										</div>
+										<div class="uk-width-medium-1-1 uk-container-center"><br />
+											<div class="uk-text-center uk-panel">
+												<a href="http://twitter.com/assortex" class="uk-icon-button uk-icon-twitter"></a>
+												<a href="http://github.com/assortex" class="uk-icon-button uk-icon-github"></a>
+											</div>
+										</div>
+									</div>
+							</div>
+						</div>
+						<div class="uk-width-medium-1-2 uk-grid-margin">
+							<ul>
+								<li>Contact us for any bugs that you will see via email or Twitter</li>
+								<li>If you're a web developer who would like to contribute, you can fork the <code>assortex/lia</code> repository on GitHub and send a pull request.</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -180,36 +206,14 @@
 						<footer>
 							<hr />
 							<div class="uk-panel">
-												&copy; 2014 LIA. Made with <a href="http://getuikit.com" target="_blank">UIKit <i class="uk-icon-external-link"></i></a> and <a href="http://leafletjs.com" target="_blank">LeafletJS <i class="uk-icon-external-link"></i></a>. LIA is under the <a href="http://opensource.org/licenses/MIT" target="_blank">MIT License <i class="uk-icon-external-link"></i></a>.
+								&copy; 2014 LIA. Made with <a href="http://getuikit.com" target="_blank">UIKit <i class="uk-icon-external-link"></i></a> and <a href="http://leafletjs.com" target="_blank">LeafletJS <i class="uk-icon-external-link"></i></a>. LIA is under the <a href="http://opensource.org/licenses/MIT" target="_blank">MIT License <i class="uk-icon-external-link"></i></a>.
 							</div>
 						</footer>
 					</div>
 				</div>
 
 				<!-- Scripts -->
-				<script type="text/javascript">
-				
-					var osmUrl = 'http://{s}.tile.cloudmade.com/10567f6272c647fea571f0d96235b618/997/256/{z}/{x}/{y}.png',
-						osmAttrib = '&copy; <a href="http://openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-						osm = L.tileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib});
-				
-					var map = L.map('map').setView([14.58375, -238.88277], 15).addLayer(osm);
-				
-					L.marker([14.58375, -238.88277])
-						.addTo(map)
-						.bindPopup('A pretty CSS3 popup.<br />Easily customizable.')
-						.openPopup();
-					
-					var popup = L.popup();
-
-					function onMapClick(e) {
-					    popup
-					        .setLatLng(e.latlng)
-					        .setContent("You clicked the map at " + e.latlng.toString())
-					        .openOn(map);
-					}
-					
-					map.on('click', onMapClick);
-				</script>
+				<script src="./src/map/map.js"></script>
+				<script src="./database/loc.js"></script>
 	</body>
 </html>
