@@ -9,8 +9,8 @@
 	    motorways = L.tileLayer(cmUrl, {styleId: 46561, attribution: cmAttr});
 
 	var map = L.map('map', {
-		center: [14.60223, -238.89354],
-		zoom: 15,
+		center: [14.58292, 121.11757],
+		zoom: 12,
 		layers: [minimal, motorways, cities]
 	});
 
