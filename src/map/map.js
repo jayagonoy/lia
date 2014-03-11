@@ -10,7 +10,7 @@
 
 	var map = L.map('map', {
 		center: [14.58292, 121.11757],
-		zoom: 12,
+		zoom: 15,
 		layers: [minimal, motorways, cities]
 	});
 
