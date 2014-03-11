@@ -1,9 +1,16 @@
-var ord1="This is a test sample of code. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
-var ord2="This is a test sample of code. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
-var ord3="This is a test sample of code. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+// Input all of the ordinances here
 
-with (document) {
-	write('<p>' + ord1 + '</p>');
-	write('<p>' + ord2 + '</p>');
-	write('<p>' + ord3 + '</p>');
-}
+	var ord1 = '<div class="uk-panel"><div class="uk-panel-title">Ordinance # 2012</div><strong>An ordinance regarding an implementation of an ordinance</strong><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p><i>Penalties: Php 1231.20</i></div>';
+	
+	var ord2 = '<div class="uk-panel"><div class="uk-panel-badge uk-badge">New</div><div class="uk-panel-title">Ordinance # 2012</div><strong>An ordinance regarding an implementation of an ordinance</strong><p>Penalties: Php 1231.20</p></div>';
+	
+	var ord3 = '<div class="uk-panel"><div class="uk-panel-badge uk-badge">New</div><div class="uk-panel-title">Ordinance # 2012</div><strong>An ordinance regarding an implementation of an ordinance</strong><p>Penalties: Php 1231.20</p></div>'
+
+// Write the ordinances into the 'Latest Orinances' sidebar
+	
+	with (document) {
+		write(ord1);
+		write(ord2);
+		write(ord3);
+	}
+	
