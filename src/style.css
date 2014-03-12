@@ -4503,3 +4503,9 @@ input.uk-search-field {
     page-break-after: avoid;
   }
 }
+
+.artwork {
+	background: url('./footer.png');
+	height: 200px;
+	background-size: cover;	
+}

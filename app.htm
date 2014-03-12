@@ -10,6 +10,7 @@
 			width: 100%;
 			height: calc(100% - 5.5%);
 			position: absolute;
+			z-index: -1;
 		}
 		
 		@media (max-width:767px) {
@@ -67,7 +68,7 @@
 				<ul class="uk-navbar-nav">
 					<li class="uk-active uk-hidden-small"><a href="#"><img class="uk-responsive-width uk-responsive-height" src="src/logo.svg" alt="LIA Logo" title="Location. Information. Action."/></a></li>
 					<div class="uk-navbar-content">
-						<form class="uk-search" data-uk-search="{source:'./database/data.json'}">
+						<form class="uk-search" data-uk-search="{source:'./database/search.json'}">
 							<input class="uk-search-field" type="search" placeholder="Search...">
 							<button class="uk-search-close" type="reset"></button>
 						</form>
@@ -109,7 +110,7 @@
 			
 			<!-- Modals -->
 			<div id="about" class="uk-modal">
-				<div class="uk-modal-dialog">
+				<div class="uk-modal-dialog uk-animation-slide-top">
 					<a class="uk-modal-close uk-close uk-close-alt"></a>
 					<div class="uk-article">
 						<h1 class="uk-article-title">About</h1>
@@ -118,7 +119,7 @@
 				</div>
 			</div>
 			<div id="faq" class="uk-modal">
-				<div class="uk-modal-dialog">
+				<div class="uk-modal-dialog uk-animation-slide-top">
 					<a class="uk-modal-close uk-close uk-close-alt"></a>
 					<div class="uk-article">
 						<h1 class="uk-article-title">FAQ</h1>
@@ -127,7 +128,7 @@
 				</div>
 			</div>
 			<div id="contact" class="uk-modal">
-				<div class="uk-modal-dialog">
+				<div class="uk-modal-dialog uk-animation-slide-top">
 					<a class="uk-modal-close uk-close uk-close-alt"></a>
 					<div class="tertiary uk-grid uk-margin-bottom"  uk-grid-preserve>
 						<div class="uk-width-1-1">
@@ -215,5 +216,6 @@
 				<!-- Scripts -->
 				<script src="./src/map/map.js"></script>
 				<script src="./database/loc.js"></script>
+				<script src="./database/plot.js"></script>
 	</body>
 </html>
