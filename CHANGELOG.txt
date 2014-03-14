@@ -6,3 +6,5 @@ March 11 (7:22am) - Moved inline JS to individual js files
 March 11 (4:05pm) - will be adding ./src/map/map.js,  and ./src/map/loc.js to git repo
 March 12 (1:58am) - modified app.htm, database/loc.js and index.htm. updated uikit js file to stop showing more results. removing uikit.js in existence of uikit.min.js. renamed database/data.json to search.json for formality. loc.js now has a map showing the border of the municipality. created database/plot.js so that the map borders won't be affected. modified credits on app.htm. added humans.txt. 
 March 12 (3:12am) - index is 85% complete. app is 65% complete
+March 14 (3:05am) - changed plot.js, style.css, ordinances.js and added a backup called ords.js.
+March 14 (3:14am) - changed index.htm and app.htm, added meta tags

@@ -790,6 +790,7 @@ iframe {
   font-weight: normal;
   text-transform: none;
   color: #4d4b4b;
+  text-shadow: 1px 1px 10px #02406F;
 }
 .uk-panel-badge {
   position: absolute;
