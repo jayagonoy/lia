@@ -1,6 +1,6 @@
 // Make a border around the municipal vicinity
 
-var munBorder = L.polygon([
+var munBorder = L.polyline([
   [14.554509,121.114483],
   [14.553221,121.113539],
   [14.553013,121.113431],

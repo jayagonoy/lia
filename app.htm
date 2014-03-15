@@ -75,13 +75,7 @@
 		<!-- Navbar -->
 			<nav class="uk-navbar">
 				<ul class="uk-navbar-nav">
-					<li class="uk-active uk-hidden-small"><a href="#"><img class="uk-responsive-width uk-responsive-height" src="src/logo.svg" alt="LIA Logo" title="Location. Information. Action."/></a></li>
-					<div class="uk-navbar-content">
-						<form class="uk-search" data-uk-search="{source:'./database/search.json'}">
-							<input class="uk-search-field" type="search" placeholder="Search...">
-							<button class="uk-search-close" type="reset"></button>
-						</form>
-					</div>
+					<li class="uk-active uk-hidden-small"><a href="/"><img data-uk-tooltip="{pos:'right'}" title="Home" class="uk-responsive-width uk-responsive-height" src="src/logo.svg" alt="LIA Logo" title="Location. Information. Action."/></a></li>
 				</ul>
 				<div class="uk-navbar-flip">
 					<a href="#ocmenu" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
@@ -106,7 +100,7 @@
 									<li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://assortex.github.io/lia"><i class="uk-icon-facebook"></i> Post to Facebook</a></li>
 									<li><a target="_blank" href="https://twitter.com/home?status=http://assortex.github.io/lia"><i class="uk-icon-twitter"></i> Tweet This</a></li>
 									<li><a target="_blank" href="https://plus.google.com/share?url=http://assortex.github.io/lia"><i class="uk-icon-google-plus"></i> Share on Google+</a></li>
-									<li><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=http://assortex.github.io/lia&title=LIA:%20Location,%20Infromation,%20Action&summary=&source="><i class="uk-icon-linkedin"></i> Share on LinkedIn</a></li>
+									<li><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://assortex.github.io/lia&amp;title=LIA:%20Location,%20Infromation,%20Action&amp;summary=&amp;source="><i class="uk-icon-linkedin"></i> Share on LinkedIn</a></li>
 								</ul>
 							</div>
 						</li>
@@ -210,7 +204,11 @@
 			<div id="sidebar" class="uk-offcanvas">
 					<div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
 						<div class="uk-container uk-margin-top">
-							<span class="uk-h2">Latest Ordinances</span>
+							<span class="uk-h2">Latest Ordinances Listed</span>
+							<a href="" class="uk-close uk-close-alt uk-float-rightb uk-visible-small"></a>
+						</div>
+						<hr />
+						<div class="uk-container uk-margin-top">
 							<script src="./database/ordinances.js"></script>
 						</div>
 						<footer>

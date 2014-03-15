@@ -4510,3 +4510,5 @@ input.uk-search-field {
 	height: 200px;
 	background-size: cover;	
 }
+
+#sidebar .uk-offcanvas-bar {width: 480px}
