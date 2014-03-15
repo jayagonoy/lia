@@ -11,3 +11,4 @@ March 14 (3:14am) - changed `index.htm` and `app.htm`, added meta tags
 March 15 (1:55am) - as suggested by colleague, expand sidebar's `.uk-offcanvas-bar` to 480px. changed `src/map/leaflet.css` set `.leaflet-content` to 200px due to how long the ordinances were. about the search function, GitHub's nginx engine doesn't allow XMLHttpRequests so we have to deal with it. tweaked `app` a bit.
 March 15 (3:00am) - learned about `<details>` and `<summary>`, modified `ordinances.js` and `app` as well.
 March 15 (3:00am) - map changed from polygon to polyline.
+March 15 (5:29pm)- removed search function due to complications in GitHub's servers, as it does not accept XHR.
