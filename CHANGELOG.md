@@ -1,5 +1,7 @@
 # Change Log
 
+This is a change log for offline edits. More changes are incluced in the commit change notes.
+
 ## March 7
 (initial)
 * Added Homepage, modified App to have off-canvas sidebar.
