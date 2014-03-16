@@ -26,7 +26,7 @@
 	document.write(ord2008011 + '<hr/>');
 	document.write(ord2008015 + '<hr/>');
 	document.write(ord2008024 + '<hr/>');
-	document.write(ord2008021 : '<hr/>');
+	document.write(ord2008021 + '<hr/>');
 	document.write(ord2009012 + '<hr/>');
 	document.write(ord2010009 + '<hr/>');
 	document.write(ord2011007 + '<hr/>');
