@@ -48,3 +48,11 @@
 * Contact section now includes the team.
 * only thing left is the FAQ.
 * changed changelog.
+
+(3:39pm)
+* modded documentation
+* modded ordinances.js
+* changed screenshots
+* added `src/avatars` directory
+* modified `app.htm`
+* modified `index.htm`
