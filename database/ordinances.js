@@ -9,8 +9,6 @@
 	
 	var ord2008024 = '<div id="2008024"><div class="uk-panel-title">Cainta Municipal Ordinance # 2008-024</div><strong>An Ordinance Penalizing Prank Callers / Texters within the Municipality of Cainta, Rizal.</strong><p><details><summary>More Info</summary><blockquote><b>Section 1</b> PRANK - A ridiculous or mildly mischievous act and/or to play tricks maliciously to sow panic, fear and/or physical harm to the call / text message recipient.</blockquote><blockquote><b>Section 3</b>. SCOPE AND COVERAGE - Calls / text message made / send through the telephone and mobile phone in residential, commercial and industrial establishments.</blockquote></p><p><b>Penalty</b>: Php2,500.00  but not more than Php5,000.00 or imprisonment of not less than thirty (30) days but not more than (90) days, or both shall be imposed against the offender or upon the discretion of the court. [As per Section 4]</p><p><b>Implementing Agencies</b>: The <mark>Cainta PNP</mark>, <mark>Barangay Officials & Tanods</mark>, <mark>MPSO (Municipal Protection and Safety Office)</mark> [As per Section 6.]</details></p></div>';
 	
-	var ord2009012 = '<div id="2009012"><div class="uk-panel-title">Cainta Municipal Ordinance # 2009-012</div><strong>An Ordinance Rescinding Article D - "Towing of Stalled or Illegally Parked Motor Vehicles of the <i>Traffic Code of Cainta, Rizal (2001)</i> Under Resolution no. 01-0047 and Municipal Ordinance no. 01-0016</strong><p><i>Enacted November 22, 2010</i></p><p><details><summary>More Info</summary><q><b>WHEREAS</b>, the Sanggunian Bayan deems necessary to rescind Article D. Of subject Traffic Code 2001 due to the reported irregularities in its implementation and to give way for amendments and the preparation of a corresponding guideline, particularly to towing operations.</q></p><p><q>NOW THEREFORE, BE IT ORDAINED AS IT IS HEREBY ORDAINS by by the Sangguniang Bayan of Cainta, Rizal that: <b>Section 1</b>,  Article D (Towing of stalled or illegally parked motor vehicles of the <i>Traffic Code of Cainta, Rizal (2001))</i> is hereby rescinded.</q></details></p></div>';
-	
 	var ord2010009 = '<div id="2010009"><div class="uk-panel-title">Cainta Municipal Ordinance # 2010-009</div><strong>"Tapat Ko, Linis Ko" Ordinance</strong><p><i>Enacted August 20, 2009</i></p><p><details><summary>More Info</summary><blockquote><b>Section 1</b>. It shall be the responsibility of the owner and/or dweller, lessee, occupant of a residential or commercial establishment to maintain the cleanliness of the sidewalk and streets fronting their residence or establishment.</blockquote></p><p><b>Penalties</b>: (1st Offense) Warning; (2nd and Subsequent Offense) Fine of Php2,000.00. [As per Section 3.]</p><p><b>Implementing Agencies</b>: <mark>Cainta Waste Management Office (WMO)</mark> [As of Section 4.]</details></p></div>';
 	
 	var ord2011007 = '<div id="2011007"><div class="uk-panel-title">Cainta Municipal Ordinance # 2011-007</div><strong>Express Lane Ordinance for Senior Citizens and Persons with Disabilities</strong><p><details><summary>More Info</summary><q>All public and private establishments in this municipality such as, but not limited to utility companies (water, telephone, and electric), banks and financial institutions, shopping malls, supermarkets, department stores, drugstores, fastfood chain outlets, bus terminals, and governments offices required to provide express lanes for seniors, persons with disabilities.</q> [Section 1]</p><p><q>[...] available only to all senior citizens and persons with disability who are Filipino citizens upon submission of any valid ID as proof of his/her entitlement thereto.</q> [Section 2]</p><p><b>Penalty</b>: A fine of not less than Php1,000.00 but not exceeding Php2,000.00 and imprisonment of not less than six months but not more than two years. [As per Section 3.]</details></p></div>';
@@ -23,12 +21,10 @@
 		
 // Write the ordinances into the 'Latest Ordinances' sidebar (Only three should be displayed, else a longcat scrollbar will appear. At least make it short.)
 	
-
 	document.write(ord2008009 + '<hr/>');
 	document.write(ord2008011 + '<hr/>');
 	document.write(ord2008015 + '<hr/>');
 	document.write(ord2008024 + '<hr/>');
-	document.write(ord2009012 + '<hr/>');
 	document.write(ord2010009 + '<hr/>');
 	document.write(ord2011007 + '<hr/>');
 	document.write(ord2012001 + '<hr/>');
