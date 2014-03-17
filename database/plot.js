@@ -25,5 +25,11 @@
 	L.marker([14.6193, 121.1017]).addTo(map).bindPopup(ord2008009);
 	L.marker([14.60449, 121.10544]).addTo(map).bindPopup(ord2008009);
 	L.marker([14.57566, 121.12096]).addTo(map).bindPopup(ord2008009);
-
-	
+	L.marker([14.58774, 121.11274]).addTo(map).bindPopup(ord2011005);
+	L.marker([14.59509, 121.11037]).addTo(map).bindPopup(ord2011005);
+	L.marker([14.60718, 121.10491]).addTo(map).bindPopup(ord2011005);
+	L.marker([14.61775, 121.10059]).addTo(map).bindPopup(ord2011005);
+	L.marker([14.62001, 121.10146]).addTo(map).bindPopup(ord2011005);
+	L.marker([14.61989, 121.10257]).addTo(map).bindPopup(ord2011005);
+	L.marker([14.58425, 121.12382]).addTo(map).bindPopup(ord2011005);
+	L.marker([14.60652, 121.10498]).addTo(map).bindPopup(ord2008003);

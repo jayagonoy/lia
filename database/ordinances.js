@@ -18,15 +18,38 @@
 	var ord2012003 = '<div id="2012003"><div class="uk-panel-title">Cainta Municipal Ordinance # 2012-003</div><strong>Municipal PDAO Ordinance</strong><p>An ordinance <em>organizing and establishing a Persons with Disability Affairs Office in the Municipality of Cainta</em> providing appropriations for the implementation thereof</p><p><details><summary>More Info</summary>[Indicated in this ordinance is the duties and responsibilities of a PWD Affairs Officer.]</details></p></div>';
 	
 	var ord2014007 = '<div id="2014007"><div class="uk-panel-title">Cainta Municipal Ordinance # 2014-007</div><strong>Towing and Impounding of Illegally-parked or Stalled Vehicles throughout the main thoroughfares of the Municipality of Cainta</strong><p><i>Enacted February 3, 2014</i></p><p><details><summary>More Info</summary>The ordinance will be implemented from <em>8:00AM to 9:00PM</em>. <b>Areas affected</b>: <em>From the Cainta Junction up to Gen. A. Ricarte St.</em> (A. Bonifacio Avenue, both sides), <em>Ortigas Avenue Extension</em> (under the jurisdiction of the municipality, both sides), <em>Imelda Avenue</em> (both sides), <em>Amang Rodriguez Avenue</em> (both sides of the whole stretch of the road),  <em>Karangalan Service Road</em> (both sides), <em>East Bank Road</em> (under the jurisdiction of the municipality, both sides).</details></p></div>';
-		
-// Write the ordinances into the 'Latest Ordinances' sidebar (Only three should be displayed, else a longcat scrollbar will appear. At least make it short.)
 	
-	document.write(ord2008009 + '<hr/>');
-	document.write(ord2008011 + '<hr/>');
-	document.write(ord2008015 + '<hr/>');
-	document.write(ord2008024 + '<hr/>');
-	document.write(ord2010009 + '<hr/>');
-	document.write(ord2011007 + '<hr/>');
-	document.write(ord2012001 + '<hr/>');
+	var ord2008010 = '<div id="2008010"><div class="uk-panel-title">Cainta Municipal Ordinance # 2008-010</div><strong>An ordinance prohibiting spitting, urinating, defecating, and/or littering and other nobbish in public buildings, streets, plazas and other public places in Cainta.</strong><p><details><summary>More Info</summary></p><p><b>Penalties</b>: (1st Offense) Fine of Php1,000.00; (2nd Offense) Fine of Php1,500.00; (3rd Offense) Php2,500.00</p></details></div>';
+	
+	var ord2008003 = '<div id="2008003"><div class="uk-panel-title">Cainta Municipal Ordinance # 2008-003</div><strong>An ordinance prohibiting scavenging of garbage (waste) open-up or scatter stored waste in any waste bags or container for any purpose whatsoever and prescribing penalties for violation thereof.</strong><p><details><summary>More Info</summary></p><p><b>Penalties</b>: (1st Offense) Fine of Php500.00; (2nd Offense) Fine of Php1,000.00; (3rd Offense) Php2,500.00</p></details></div>';
+	
+	var ord2008019 = '<div id="2008019"><div class="uk-panel-title">Cainta Municipal Ordinance # 2008-003</div><strong>An ordinance regulating the use of main streets within the municipality of Cainta</strong><p><details><summary>More Info</summary></p><p><b>Penalties</b>: (1st Offense) Fine of Php500.00; (2nd Offense) Fine of Php1,000.00; (3rd Offense) Php2,000.00</p></details></div>';
+	
+	var ord2011005 = '<div id="2011005"><div class="uk-panel-title">Cainta Municipal Ordinance # 2011-005</div><strong>An ordinance banning the use of plastic bags</strong><p><details><summary>More Info</summary></p><p><b>Penalties</b>: (1st Offense) Fine of Php1,000.00; (2nd Offense) Fine of Php2,000.00; (3rd Offense) Php3,000.00</p></details></div>';
+	
+	var ord2008008 = '<div id="2008008"><div class="uk-panel-title">Cainta Municipal Ordinance # 2008-008</div><strong>An ordinance prohibiting dog owners from bringing out their pet dogs to urinate and defacate on streets, sidewalks and other public places.</strong><p><details><summary>More Info</summary></p><p><b>Penalties</b>: (1st Offense) Fine of Php500.00; (2nd Offense) Fine of Php1,000.00; (3rd Offense) Php2,000.00</p></details></div>';
+	
+	var ord2011014 = '<div id="2011014"><div class="uk-panel-title">Cainta Municipal Ordinance # 2011-014</div><strong>Emission Code of Cainta</strong><p><details><summary>More Info</summary></p><p><b>Penalties</b>: [Motor Vehicles] (1st Offense) Fine of Php1,000.00; (2nd Offense) Fine of Php2,000.00; (3rd Offense) Php3,000.00; [Motorcycles / Tricycles] (1st Offense) Fine of Php300.00; (2nd Offense) Fine of Php500.00; (3rd Offense) Php700.00; </p></details></div>';
+	
+	var ord2003011 = '<div id="2003011"><div class="uk-panel-title">Cainta Municipal Ordinance # 2003-011</div><strong>An ordinance prohibiting all kinds of repair works, steel works, junkshops and other business to occupy any portion of private and public roads and streets within Cainta</strong><p><details><summary>More Info</summary></p><p><b>Penalties</b>: (1st Offense) Fine of Php1,500.00; (2nd and Subsequent Offense) Fine of Php2,500.00</p></details></div>';
+	
+// Write the ordinances into the 'Latest Ordinances' sidebar (Only three should be displayed for optimal viewing, else a longcat scrollbar will appear. At least make it short.)
+	
+	
+	document.write(ord2003011 + '<hr />');	
+	document.write(ord2008008 + '<hr />');	
+	document.write(ord2008009 + '<hr />');
+	document.write(ord2008010 + '<hr />');
+	document.write(ord2008011 + '<hr />');
+	document.write(ord2008003 + '<hr />');	
+	document.write(ord2008015 + '<hr />');
+	document.write(ord2008019 + '<hr />');
+    document.write(ord2008021 + '<hr />');
+	document.write(ord2008024 + '<hr />');
+	document.write(ord2010009 + '<hr />');
+	document.write(ord2011005 + '<hr />');
+	document.write(ord2011007 + '<hr />');
+	document.write(ord2011014 + '<hr />');
+	document.write(ord2012001 + '<hr />');
 	document.write(ord2012003 + '<hr />');
 	document.write(ord2014007);
