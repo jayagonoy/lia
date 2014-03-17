@@ -58,3 +58,8 @@ This is a change log for offline edMore changes are incluced in the commit chang
 * added `src/avatars` directory
 * modified `app.htm`
 * modified `index.htm`
+
+## March 17
+* final set of edits before project launch
+* additional ordinances listed
+
