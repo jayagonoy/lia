@@ -1,7 +1,7 @@
 // Plot all the ordinances fetched from database/ordinances.js in the map 
 	
 	L.marker([14.57393, 121.12468]).addTo(map).bindPopup(ord2014007);
-	L.marker([14.58625, 121.1149]).addTo(map).bindPopup(ord20);
+	L.marker([14.58625, 121.1149]).addTo(map).bindPopup(ord2008009);
 	L.marker([14.5872, 121.11133]).addTo(map).bindPopup(ord2014007);
 	L.marker([14.5835, 121.12444]).addTo(map).bindPopup(ord2014007);
 	L.marker([14.60086, 121.10714]).addTo(map).bindPopup(ord2014007);
