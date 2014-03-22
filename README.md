@@ -3,7 +3,7 @@
 
 **L**ocation. **I**nformation. **A**ction. - Know your neighborhood's ordinances.
 
-# Introduction
+## Introduction
 
 **LIA** is a simple tool that gives you information on the ordinances being implemented on your neighboorhood.
 
@@ -15,3 +15,8 @@
 ## Documentation
 
 Documentation is available at `/documentation.htm`.
+
+## Issues
+
+* SVG not working for IE [<9]
+* <details> not working for majority of browsers, using polyfill
