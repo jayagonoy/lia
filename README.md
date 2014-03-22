@@ -19,4 +19,5 @@ Documentation is available at `/documentation.htm`.
 ## Issues
 
 * SVG not working for IE [<9]
-* <details> not working for majority of browsers, using polyfill
+* <details> not working for majority of browsers, using polyfill for that.
+
