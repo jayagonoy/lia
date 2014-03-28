@@ -75,7 +75,7 @@
 		<div class="uk-margin uk-container uk-container-center">
 			<div class="uk-article uk-margin-top uk-margin">
 				<h1 class="uk-article-title uk-text-center">Documentation</h1>
-				<p class="uk-article-meta uk-text-center">Written March 16, 2014</p>
+				<p class="uk-article-meta uk-text-center">Written March 16, 2014 - Updated March 29, 2014</p>
 			</div>
 		</div>
 		<img src="screenshots/shot.png" class="uk-width-1-1" alt="LIA screenshot"/>	
@@ -199,8 +199,10 @@
 				</p>
 				<hr class="uk-article-divider">
 				<h2 id="leaflet">Leaflet.js</h2>
-				<p>LIA uses the crowdsourced data from <a href="http://openstreetmap.org" target="_blank">OpenStreetMap <i class="uk-icon-external-link"></i></a> through <a href="http://cloudmade.com" target="_blank">Cloudmade <i class="uk-icon-external-link"></i></a>'s servers, which are prescribed in <code>/src/map/map.js</code>. Since we provided LIA with our own Cloudmade API Key, you'll need to replace that with your own API Key, which you can sign up for free at cloudmade.com, as prescribed:</p>
-				<pre>cmUrl = 'http://{s}.tile.cloudmade.com/<mark>[Place your API Key here]</mark>/{styleId}/256/{z}/{x}/{y}.png';</pre>
+				<p>LIA uses the crowdsourced data from <a href="http://openstreetmap.org" target="_blank">OpenStreetMap <i class="uk-icon-external-link"></i></a> through <a href="http://mapbox.com" target="_blank">MapBox <i class="uk-icon-external-link"></i></a>'s servers, which are included <code>/src/map/map.js</code>. Since we provided LIA with our own MapBox API Key, you'll need to replace that with your own API Key and add it to the javascript file, as prescribed:</p>
+				<pre>var mapboxTiles = L.tileLayer('https://{s}.tiles.mapbox.com/v3/assortex.hl2c1pgo/{z}/{x}/{y}.png', {
+                        attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
+                    });</pre>
 				<p>Leaflet has its own <a href="http://leafletjs.com/reference.html" target="_blank">documentation <i class="uk-icon-external-link"></i></a>, with various examples to try out as well. For LIA, we used the following functions:
 					<ul>
 						<li>L.polyline</li>
