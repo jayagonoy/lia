@@ -200,8 +200,8 @@
 				<hr class="uk-article-divider">
 				<h2 id="leaflet">Leaflet.js</h2>
 				<p>LIA uses the crowdsourced data from <a href="http://openstreetmap.org" target="_blank">OpenStreetMap <i class="uk-icon-external-link"></i></a> through <a href="http://mapbox.com" target="_blank">MapBox <i class="uk-icon-external-link"></i></a>'s servers, which are included <code>/src/map/map.js</code>. Since we provided LIA with our own MapBox API Key, you'll need to replace that with your own API Key and add it to the javascript file, as prescribed:</p>
-				<pre>var mapboxTiles = L.tileLayer('https://{s}.tiles.mapbox.com/v3/assortex.hl2c1pgo/{z}/{x}/{y}.png', {
-                        attribution: '<a href="http://www.mapbox.com/about/maps/" target="_blank">Terms &amp; Feedback</a>'
+				<pre>var mapboxTiles = L.tileLayer('https://{s}.tiles.mapbox.com/v3/<mark>[place your API Key here]</mark>/{z}/{x}/{y}.png', {
+                        attribution: '&lt;a href="http://www.mapbox.com/about/maps/" target="_blank"&gt;Terms &amp; Feedback&lt;/a&gt;'
                     });</pre>
 				<p>Leaflet has its own <a href="http://leafletjs.com/reference.html" target="_blank">documentation <i class="uk-icon-external-link"></i></a>, with various examples to try out as well. For LIA, we used the following functions:
 					<ul>
