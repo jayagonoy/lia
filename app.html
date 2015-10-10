@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#" class="uk-height-1-1">
+    <head>
+		<title>Ordinance Map &rsaquo; LIA</title>
+		
+		<link rel="shortcut icon" href="src/favicon.ico" type="image/x-icon" />
+		<link rel="icon" href="src/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon-precomposed" href="src/apple-touch-icon.png" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<meta property="fb:admins" content="127931818" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Ordinance Map &rsaquo; LIA" />
+		<meta property="og:url" content="/app.html" />
+		<meta property="og:image" content="src/apple-touch-icon.png" />
+		<meta property="og:description" content="Get to know your neighborhood's ordinances in the simplest way possible." />
+		<meta property="og:site_name" content="LIA" />
+		<meta name="twitter:creator" content="@assortex">
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		
+		<style>
+		@media print {
+			nav, footer, img {display:none;}
+		}
+		</style>
+
+		<style>
+		body {overflow: hidden;}
+		
+		#map {
+			width: 100%;
+			height: calc(100% - 5.5%);
+			position: absolute;
+			z-index: 1;
+		}
+
+		.info {
+			padding: 13px 8px;
+			font: 14px/16px Arial, Helvetica, sans-serif;
+			background: white;
+			background: rgba(255,255,255,0.8);
+			box-shadow: 0 0 15px rgba(0,0,0,0.2);
+			border-radius: 5px;
+		}
+		
+		.leaflet-popup-content {
+			margin: 13px 19px;
+			line-height: 1.4;
+			max-height: 200px;
+			overflow: auto;
+		}		
+		
+		</style>
+		
+		<!-- CSS Files -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.22.0/css/uikit.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.22.0/css/components/tooltip.gradient.min.css" />
+		
+		<link rel="shortcut icon" href="src/favicon.ico" type="image/x-icon" />
+		<link rel="icon" href="src/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon-precomposed" href="src/apple-touch-icon.png" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<meta property="fb:admins" content="127931818" />
+		<meta property="og:type" content="" />
+		<meta property="og:title" content="LIA: Location. Information. Action." />
+		<meta property="og:url" content="/app.htm" />
+		<meta property="og:image" content="src/apple-touch-icon.png" />
+		<meta property="og:description" content="Get to know your neighborhood's ordinances in the most simplest way possible." />
+		<meta property="og:site_name" content="LIA" />
+		<meta name="twitter:creator" content="@assortex">
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		
+	</head>
+	<body class="uk-height-1-1">
+
+		<!-- Navbar -->
+			<nav class="uk-navbar uk-navbar-attached">
+				<ul class="uk-navbar-nav">
+					<li class="uk-active"><a href="/lia"><img style="height: 40px; width: 53px;" data-uk-tooltip="{pos:'right'}" title="Home" class="uk-responsive-width uk-responsive-height" src="logo.svg" alt="LIA Logo" title="Location. Information. Action."/></a></li>
+					<div class="uk-navbar-content">
+						<button class="uk-button uk-button-success" data-uk-modal="{target:'#sidebar'}" data-uk-tooltip="{pos: 'right'}" title="More Ordinances are listed here.">
+							<i class="uk-icon-certificate"></i> Latest Ordinances
+						</button>
+					</div>
+				</ul>
+				<div class="uk-navbar-flip">
+					<a href="#ocmenu" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
+					<ul class="uk-navbar-nav uk-hidden-small">
+						<li><a href="index.html#about" target="_blank">About <i class="uk-icon-external-link"></i></a></li>
+						<li><a href="index.html#faq" target="_blank">FAQ <i class="uk-icon-external-link"></i></a></li>
+						<li><a href="documentation.html" target="_blank">Documentation <i class="uk-icon-external-link"></i></a></li>
+						<li><a href="index.html#contact" target="_blank">Contact <i class="uk-icon-external-link"></i></a></li>
+						<li class="uk-parent uk-navbar-content" data-uk-dropdown>
+							<button class="uk-button uk-button-danger">
+									Share 
+									<i class="uk-icon-facebook"></i>
+									<i class="uk-icon-twitter"></i>
+									<i class="uk-icon-google-plus"></i>
+							</button>
+							<div class="uk-dropdown uk-dropdown-navbar">
+								<ul class="uk-nav uk-nav-navbar">
+									<li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://assortex.github.io/lia"><i class="uk-icon-facebook"></i> Post to Facebook</a></li>
+									<li><a target="_blank" href="https://twitter.com/intent/tweet"><i class="uk-icon-twitter"></i> Tweet This</a></li>
+									<li><a target="_blank" href="https://plus.google.com/share?url=http://assortex.github.io/lia"><i class="uk-icon-google-plus"></i> Share on Google+</a></li>
+									<li><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://assortex.github.io/lia&amp;title=LIA:%20Location.%20Infromation.%20Action.&amp;summary=&amp;source="><i class="uk-icon-linkedin"></i> Share on LinkedIn</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			
+			<!-- Body -->
+			<div id="map" class="uk-width-1-1 uk-height-1-1">
+				<div class="uk-vertical-align uk-width-1-2 uk-container uk-height-1-1 uk-container-center uk-position-cover" style="height: 720">
+					<div class="uk-vertical-align-middle uk-width-1-1 uk-text-center uk-container-center">
+						<i class="uk-h1 uk-icon-spinner uk-icon-spin"></i>
+					</div>
+				</div>
+			</div>
+			
+			
+			<!-- Off-canvas menu -->
+			<div id="ocmenu" class="uk-offcanvas uk-contrast">
+				<div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
+					<ul class="uk-nav">
+						<li class="uk-nav-header">Menu</li>
+						<li><a href="index.html#about" target="_blank">About <i class="uk-icon-external-link"></i></a></li>
+						<li><a href="index.html#faq" target="_blank">FAQ <i class="uk-icon-external-link"></i></a></li>
+						<li><a href="documentation.html" target="_blank">Documentation <i class="uk-icon-external-link"></i></a></li>
+						<li><a href="index.html#contact" target="_blank">Contact <i class="uk-icon-external-link"></i></a></li>
+						<li class="uk-nav-divider"></li>
+						<li class="uk-nav-header">Share</li>
+						<li>
+							<ul>
+								<li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://assortex.github.io/lia"><i class="uk-icon-facebook"></i> Post to Facebook</a></li>
+								<li><a target="_blank" href="https://twitter.com/home?status=http://assortex.github.io/lia"><i class="uk-icon-twitter"></i> Tweet This</a></li>
+								<li><a target="_blank" href="https://plus.google.com/share?url=http://assortex.github.io/lia"><i class="uk-icon-google-plus"></i> Share on Google+</a></li>
+								<li><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=http://assortex.github.io/lia&title=LIA:%20Location,%20Infromation,%20Action&summary=&source="><i class="uk-icon-linkedin"></i> Share on LinkedIn</a></li>
+							</ul>
+						</li>
+					</ul>
+					<hr />
+					<div class="uk-panel">
+						&copy; 2014 LIA. Made with <a href="http://getuikit.com" target="_blank">UIKit <i class="uk-icon-external-link"></i></a> and <a href="http://leafletjs.com" target="_blank">LeafletJS <i class="uk-icon-external-link"></i></a>. LIA is under the <a href="http://opensource.org/licenses/MIT" target="_blank">MIT License <i class="uk-icon-external-link"></i></a>. <i class="uk-icon-html5"></i> <i class="uk-icon-css3"></i> HTML5 and CSS3 compatible.
+					</div>
+				</div>
+			</div>
+				
+			<div id="sidebar" class="uk-modal">
+					<div class="uk-modal-dialog uk-modal-dialog-large">
+						<a class="uk-modal-close uk-close"></a>
+						<div class="uk-modal-header uk-margin-top">
+							<span class="uk-h2">Latest Ordinances Listed</span>
+						</div>
+						<div class="uk-container uk-margin-top">
+							<script src="./database/ordinances.js"></script>
+						</div>
+						<footer>
+							<hr />
+							<div class="uk-panel">
+								&copy; 2014 LIA. Made with <a href="http://getuikit.com" target="_blank">UIKit <i class="uk-icon-external-link"></i></a> and <a href="http://leafletjs.com" target="_blank">LeafletJS <i class="uk-icon-external-link"></i></a>. LIA is under the <a href="http://opensource.org/licenses/MIT" target="_blank">MIT License <i class="uk-icon-external-link"></i></a>. <i class="uk-icon-html5"></i> <i class="uk-icon-css3"></i> HTML5 and CSS3 compatible.
+							</div>
+						</footer>
+					</div>
+				</div>
+			</div>
+		
+		<!-- JS Files -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.22.0/js/uikit.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.js"></script>
+		<script src="./src/map.js"></script>
+		<script src="./database/loc.js"></script>
+		<script src="./database/plot.js"></script>
+		<script src="./src/details.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.22.0/js/components/tooltip.min.js"></script>
+		<script>
+			$('details').details();
+		</script>
+
+	</body>
+</html>

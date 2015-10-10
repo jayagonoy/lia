@@ -1,10 +1,10 @@
-var mapboxTiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+var osmTiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 });	
 
 
 var map = L.map('map')
-    .addLayer(mapboxTiles)
+    .addLayer(osmTiles)
     .setView([14.58292, 121.11757], 15);
 	
 

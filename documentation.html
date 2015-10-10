@@ -1,0 +1,279 @@
+<!DOCTYPE HTML>
+<html lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+	<head>
+		<title>Documentation &raquo; LIA</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<meta property="fb:admins" content="127931818" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Documentation &raquo; LIA" />
+		<meta property="og:url" content="/documentation.html" />
+		<meta property="og:image" content="src/apple-touch-icon.png" />
+		<meta property="og:description" content="Get to know your neighborhood's ordinances in the most simplest way possible." />
+		<meta property="og:site_name" content="LIA" />
+		<meta name="twitter:creator" content="@assortex">
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<style>
+		.masthead {background: url('./src/background.jpg'); background-size: cover; background-position: center;}
+		.center {margin: 0 auto;}
+		</style>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.22.0/css/uikit.min.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" ></script>
+		<link rel="shortcut icon" href="src/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="src/favicon.ico" type="image/x-icon" />
+		<link rel="apple-touch-icon-precomposed" href="src/apple-touch-icon.png" />
+	</head>
+	<body>
+
+		<!-- Navbar -->
+			<nav class="uk-navbar uk-navbar-attached">
+				<ul class="uk-navbar-nav">
+					<li class="uk-active"><a href="/lia"><img style="height: 40px; width: 53px;" data-uk-tooltip="{pos:'right'}" title="Home" class="uk-responsive-width uk-responsive-height" src="logo.svg" alt="LIA Logo" title="Location. Information. Action."/></a></li>
+				</ul>
+				<div class="uk-navbar-flip">
+
+					<ul class="uk-navbar-nav ">
+						<li><a href="index.html#about" target="_blank">About <i class="uk-icon-external-link"></i></a></li>
+						<li><a href="index.html#faq" target="_blank">FAQ <i class="uk-icon-external-link"></i></a></li>
+						<li><a href="index.html#contact" target="_blank">Contact <i class="uk-icon-external-link"></i></a></li>
+					</ul>
+				</div>
+			</nav>
+
+			<div class="uk-margin uk-container uk-container-center">
+			<div class="uk-article uk-margin-top uk-margin">
+				<h1 class="uk-article-title uk-text-center uk-h1">Documentation</h1>
+				<p class="uk-article-meta uk-text-center">Written March 16, 2014 - Updated March 29, 2014</p>
+			</div>
+		</div>
+		<div class="uk-margin uk-container uk-container-center">
+			<div class="uk-article uk-margin-top">
+				<p class="uk-article-lead">In this page, we'll tell you the details behind LIA's structure. The only requirement we are asking you is your skills on using Git, because if you know that, it'll be easy for you to complete this.</p>
+				<p>If you don't know Git, that's fine &mdash; you can download the whole ZIP file on the <code><a href="http://github.com/assortex/lia">assortex/lia</a></code> repository over at GitHub and utilize your HTML and CSS3 skills.</p>
+				<p>LIA is made up of two components: The <a href="http://getuikit.com" target="_blank">UIKit <i class="uk-icon-external-link"></i></a> HTML5 framwork from <a href="http://yootheme.com" target="_blank">YOOtheme <i class="uk-icon-external-link"></i></a> and <a href="http://leafletjs.com" target="_blank">Leaflet.js <i class="uk-icon-external-link"></i></a> from <a href="http://agafonkin.com/en" target="_blank">Vladimir Agafonkin <i class="uk-icon-external-link"></i></a>.</p>
+				<p>If you need an offline copy of this page and you're using Google Chrome, you can print this to a PDF file.</p>
+				<ul class="uk-subnav uk-subnav-pill uk-container-center uk-container-center uk-text-center">
+					<li><b>Contents</b>:</li>
+					<li><a href="#structure">Structure</a></li>
+					<li><a href="#uikit">UIKit</a></li>
+					<li><a href="#leaflet">Leaflet.js</a></li>
+					<li><a href="#apphtm">app.htm</a></li>
+				</ul>
+				<hr class="uk-article-divider">
+				<h2 id="structure">Structure</h2>
+				<p>If you cloned the <code>assortex/lia</code> repository via Git, here's what you'll see:</p>
+					<pre style="-moz-column-count: 3;-moz-column-gap: 20px;-webkit-column-count: 3;-webkit-column-gap: 20px;column-count: 3;column-gap: 20px;">
+	/database
+		loc.js
+		ordinances.js
+		plot.js
+
+	/screenshots
+		shot.png
+		smallshot.png
+
+	/src
+		/map
+			/avatars (Images for the staff, optional)
+			
+		
+		&lt;!-- JavaScript --&gt; 
+		
+		map.js
+		
+		&lt;!-- CSS --&gt; 
+		style.css
+			
+		&lt;!-- Images --&gt; 
+		favicon.ico
+		apple-touch-icon.png
+		background.jpg
+		footer.png
+
+	
+	index.htm
+	app.htm
+	documentation.htm
+	
+	&lt;!-- Other Files --&gt; 
+	humans.txt
+	README.md
+	LICENSE
+	CHANGELOG.txt
+	logo.svg
+		</pre>
+					<table class="uk-table uk-table-striped  uk-table-hover">
+						<thead>
+							<tr>
+								<th>Folder</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code>/database</code></td>
+								<td>The database we use for LIA to show the ordinances and plot it to the map, written in the basic of the basic JavaScript.</td>
+							</tr>
+							<tr>
+								<td><code>/screenshots</code></td>
+								<td>The screenshots for the website.</td>
+							</tr>
+							<tr>
+								<td><code>/src</code></td>
+								<td>All of the necessary files we need for LIA to work (JavaScript, CSS, the favicon, etc.). The files for leaflet is on the <code>/src/map</code> directory. The <code>/src/avatars</code> directory is for the team, so ignore that.</td>
+							</tr>
+						</tbody>
+					</table>
+				<p>Since LIA is HTML5, everything shall start with the <code>&lt;!DOCTYPE HTML&gt;</code> tag, followed by the necessary JavaScript and CSS files. In case of <code>app.html</code>, it includes the Leaflet.js files (under the <code>/src/map</code> directory). The important files such as the necessary JavaScript and CSS for Leaflet.js and UIKit are hotlinked through <a href="http://cdnjs.org" target="_blank">CDNJS <i class="uk-icon-external-link"></i></a>.</p>
+				<hr class="uk-article-divider">
+				<h2 id="uikit">UIKit</h2>
+				<p>We chose to pick UIKit over every available framework online because of its naming convention, in which all CSS classes are prepended with the <code>uk-*</code> class, which won't mess up with the other elements on the page.</p>
+				<p>We've used the following UIKit JavaScript functions for LIA (which has a separate <a href="http://getuikit.com/docs/components.html" target="_blank">documentation <i class="uk-icon-external-link"></i></a> over at the UIKit homepage.): 
+					<ul>
+						<li>Dropdown</li>
+						<li>Off-canvas</li>
+						<li>Scrollspy</li>
+						<li>Tooltip</li>
+					</ul>
+				</p>
+				<hr class="uk-article-divider">
+				<h2 id="leaflet">Leaflet.js</h2>
+				<p>LIA uses the crowdsourced data from <a href="http://openstreetmap.org" target="_blank">OpenStreetMap <i class="uk-icon-external-link"></i></a>, which are included <code>/src/map.js</code>:</p>
+				<pre class="uk-width-3-4 uk-container-center">var osmTiles = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+					attribution: '&copy; &lt;a href="http://osm.org/copyright"&gt;OpenStreetMap&lt;/a&gt; contributors'
+				});	</pre>
+				<p>Leaflet has its own <a href="http://leafletjs.com/reference.html" target="_blank">documentation <i class="uk-icon-external-link"></i></a>, with various examples to try out as well. For LIA, we used the following functions:
+					<ul>
+						<li>L.polyline</li>
+						<li>L.marker</li>
+						<li>L.control.scale()</li>
+					</ul>
+				</p>
+				<p>We modified the <code>.leaflet-popup-content</code> class over at <code>/src/map/leaflet.css</code> so that once the ordinance is displayed, you won't be surprised with how high it will take up your browser's viewport.</p>
+				<p>For the plotting of the markers, LIA has <code>/database/plot.js</code> wherein all of the ordinances described in <code>/database/ordinances.js</code> are then displayed on the map, as follows:</p>
+				<pre class="uk-width-3-4 uk-container-center">L.marker([<mark>LatLong coordinates</mark>]).addTo(map).bindPopup(<mark><a href="#apphtm">ordXXXXYYY</a></mark>);</pre>
+				<p>To show the border of an area (in this case, the Municipality of Cainta, Rizal), LIA has <code>/database/loc.js</code>, wherein the Leaflet will draw a polyline using the LatLong coordinates described.<p>
+				<p>You'll be needing to utilize more than a hour of your time to complete drawing the whole border. We basically needed to use <a href="http://maps.google.com" target="_blank">Google Maps <i class="uk-icon-external-link"></i></a> to look at the borders and search for a Google Maps V3 Drawing Tool to get each LatLong coordinate.</p>
+				<hr class="uk-article-divider">
+				<h2 id="apphtm">app.htm</h2>
+				<p>Now this one is a bit tricky &mdash; <code>app.htm</code> is where all the code turn into reality. For this one, we've utilized the basic JavaScript syntax we can use, such as <code>document.write();</code> and <code>var</code>. Each ordinance is compiled then saved into <code>/database/ordinances.js</code> with each variable, with the naming convention <code>ord<mark>[Year]</mark><mark>[Num]</mark></code>, wherein <code><mark>[Year]</mark></code> has four digits and <code><mark>[Num]</mark></code> is three digits long. This variable should be the <code>id</code> as well to avoid confusion. We also need to compress each ordinance (meaning no breaklines shall apprear) or else the JavaScript parser won't work.</p>
+				<pre><code>var <mark>ord2008009</mark> = '&lt;div id="<mark>ord2008009</mark>"&gt;&lt;div class="uk-panel-title"&gt;<mark>Ordinance No. XX</mark>&lt;/div&gt;&lt;strong&gt;<mark>Full Ordinance Title</mark>&lt;/strong&gt;&lt;p&gt;&lt;i&gt;<mark>Date of Enactment [if available]</mark>&lt;/i&gt;&lt;/p&gt;&lt;details&gt;&lt;summary&gt;<mark>More Info</mark>&lt;/summary&gt;&lt;p&gt;<mark>Ordinance Description</mark>&lt;/p&gt;&lt;p&gt;&lt;b&gt;Penalties&lt;/b&gt;: <mark>Penalty Description</mark>&lt;/p&gt;&lt;p&gt;&lt;b&gt;Implementing Agencies&lt;/b&gt;: <mark>XXXXX</mark>&lt;/p&gt;&lt;/details&gt;&lt;/div&gt;';</code></pre>
+				<p>Inevitably, this is confusing. This is how it should look like if not for the JavaScript parsing:</p>
+				<pre class="uk-width-3-4 uk-container-center"><code>&lt;div id="<mark>ordXXXXYYY</mark>"&gt;
+	&lt;div class="uk-panel-title"&gt;<mark>Ordinance No. XXXX-YYY</mark>&lt;/div&gt;
+	&lt;strong&gt;<mark>Full Ordinance Title</mark>&lt;/strong&gt;&lt;p&gt;
+	&lt;i&gt;<mark>Date of Enactment [if available]</mark>&lt;/i&gt;&lt;/p&gt;
+	&lt;details&gt;
+		&lt;summary&gt;<mark>More Info</mark>&lt;/summary&gt;
+			&lt;p&gt;<mark>Ordinance Description</mark>&lt;/p&gt;
+			&lt;p&gt;&lt;b&gt;Penalties&lt;/b&gt;: <mark>Penalty Description</mark>&lt;/p&gt;
+			&lt;p&gt;&lt;b&gt;Implementing Agencies&lt;/b&gt;: <mark>XXXXX</mark>&lt;/p&gt;
+	&lt;/details&gt;
+&lt;/div&gt;</code></pre>
+				<p>We're using the <code>&lt;details&gt;</code> element to display more information, as it will take a lot of viewing space if every information is displayed fully in the browser. This element works best on the latest versions of Google Chrome only, but other browsers do show them well.</p>
+				<p>Aside from <code>&lt;details&gt;</code>, we also use <code>&lt;mark&gt;</code>, <code>&lt;em&gt;</code> and  <code>data-*</code> on the HTML side.</p>
+				<p>The following describes how we use each element to display each ordinance:
+					<table class="uk-table uk-table-striped uk-table-hover">
+						<thead>
+							<tr>
+								<th>Element</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code>&lt;strong&gt;</code></td>
+								<td>The full title of the ordinance</td>
+							</tr>
+							<tr>
+								<td><code>&lt;details&gt;</code></td>
+								<td>Describes what each ordinance is</td>
+							</tr>
+							<tr>
+								<td><code>&lt;summary&gt;</code></td>
+								<td>Displays text to show more info, for the user to click.</td>
+							</tr>
+							<tr>
+								<td><code>&lt;q&gt;</code></td>
+								<td>Displays a single line of quote (verbatim) for each ordinance.</td>
+							</tr>
+							<tr>
+								<td><code>&lt;blockquote&gt;</code></td>
+								<td>Displays a quoted Section of each ordinance.</td>
+							</tr>
+							<tr>
+								<td><code>&lt;i&gt;</code></td>
+								<td>Gives emphasis for a title within a title of the ordinance.</td>
+							</tr>
+							<tr>
+								<td><code>&lt;em&gt;</code></td>
+								<td>Gives emphasis to the description of the ordinance.</td>
+							</tr>
+							<tr>
+								<td><code>&lt;mark&gt;</code></td>
+								<td>Gives emphasis for the name / agency / organization indicated in the ordinance.</td>
+							</tr>
+						</tbody>
+					</table>
+				</p>
+				<p><code>app.htm</code>'s map supposed to have a height of 100% but in some tests that we have done, the map seems to be a bit overstretched, that's why we used the CSS <code>calc</code> function to mend that, as follows:<pre>height: calc(100% - 5.5%);</pre></p>
+			</div>
+		</div>
+		
+			<!-- Off-canvas menu -->
+			<div id="ocmenu" class="uk-offcanvas">
+				<div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
+					<ul class="uk-nav">
+						<li class="uk-nav-header">Menu</li>
+						<li><a href="#" data-uk-modal="{target:'#about'}">About</a></li>
+						<li><a href="#" data-uk-modal="{target:'#faq'}">FAQ</a></li>
+						<li><a href="#" data-uk-modal="{target:'#contact'}">Contact</a></li>
+						<li class="uk-nav-divider"></li>
+						<li class="uk-nav-header">Share</li>
+						<li>
+							<ul>
+								<li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://assortex.github.io/lia"><i class="uk-icon-facebook"></i> Post to Facebook</a></li>
+								<li><a target="_blank" href="https://twitter.com/home?status=http://assortex.github.io/lia"><i class="uk-icon-twitter"></i> Tweet This</a></li>
+								<li><a target="_blank" href="https://plus.google.com/share?url=http://assortex.github.io/lia"><i class="uk-icon-google-plus"></i> Share on Google+</a></li>
+								<li><a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://assortex.github.io/lia&amp;title=LIA:%20Location.%20Infromation.%20Action.&amp;summary=&amp;source="><i class="uk-icon-linkedin"></i> Share on LinkedIn</a></li>
+							</ul>
+						</li>
+					</ul>
+					<hr />
+					<div class="uk-panel">
+						&copy; 2014 LIA. Made with <a href="http://getuikit.com" target="_blank">UIKit <i class="uk-icon-external-link"></i></a> and <a href="http://leafletjs.com" target="_blank">LeafletJS <i class="uk-icon-external-link"></i></a>. LIA is under the <a href="http://opensource.org/licenses/MIT" target="_blank">MIT License <i class="uk-icon-external-link"></i></a>. <i class="uk-icon-html5"></i> <i class="uk-icon-css3"></i> HTML5 and CSS3 compatible.
+					</div>
+				</div>
+			</div>
+				
+			<div id="sidebar" class="uk-offcanvas">
+					<div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
+						<div class="uk-container uk-margin-top">
+							<span class="uk-h2">Latest Ordinances Listed</span>
+							<a class="uk-close uk-close-alt uk-float-rightb uk-visible-small"></a>
+						</div>
+						<hr />
+						<div class="uk-container uk-margin-top">
+							<script src="./database/ordinances.js"></script>
+						</div>
+						<footer>
+							<hr />
+							<div class="uk-panel">
+								&copy; 2014 LIA. Made with <a href="http://getuikit.com" target="_blank">UIKit <i class="uk-icon-external-link"></i></a> and <a href="http://leafletjs.com" target="_blank">LeafletJS <i class="uk-icon-external-link"></i></a>. LIA is under the <a href="http://opensource.org/licenses/MIT" target="_blank">MIT License <i class="uk-icon-external-link"></i></a>. <i class="uk-icon-html5"></i> <i class="uk-icon-css3"></i> HTML5 and CSS3 compatible.
+							</div>
+						</footer>
+					</div>
+				</div>
+			</div>
+		<footer>
+			<div class="artwork">&nbsp;</div>
+			<div class="uk-panel-box uk-text-center">
+				&copy; 2014 LIA. Made with <a href="http://getuikit.com" target="_blank">UIKit <i class="uk-icon-external-link"></i></a> and <a href="http://leafletjs.com" target="_blank">LeafletJS <i class="uk-icon-external-link"></i></a>. LIA is under the <a href="http://opensource.org/licenses/MIT" target="_blank">MIT License <i class="uk-icon-external-link"></i></a>. <i class="uk-icon-html5"></i> <i class="uk-icon-css3"></i> HTML5 and CSS3 compatible.
+			</div>
+		</footer>
+		
+				<!-- Scripts -->
+				<script src="./src/details.js"></script>
+
+	</body>
+</html>
